@@ -1,0 +1,17 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  line: MyString
+  stop_name: MyString
+  borough: MyString
+  daytime_routes: MyString
+  gtfs_latitude: 1.5
+  gtfs_longitude: 1.5
+
+two:
+  line: MyString
+  stop_name: MyString
+  borough: MyString
+  daytime_routes: MyString
+  gtfs_latitude: 1.5
+  gtfs_longitude: 1.5
