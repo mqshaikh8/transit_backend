@@ -6,6 +6,12 @@ Rails.application.configure do
   # since you don't have to restart the web server when you make code changes.
   config.cache_classes = false
 
+  config.cache_store = :redis_store, {
+  expires_in: 1.hour,
+  namespace: 'cache',
+  redis: { host: 'localhost', port: 6379, db: 0 },
+  }
+
   # Do not eager load code on boot.
   config.eager_load = false
 

@@ -1,3 +1,4 @@
+
 class ReviewsController < ApplicationController
     def index
         reviews = Review.all
@@ -5,14 +6,11 @@ class ReviewsController < ApplicationController
     end
 
     def create 
-        review = Review.create(review_params)
-        rener json: review
+        # byebug
+        review = Review.create(name: params[:review][:name], station_id: params[:review][:station_id], content:params[:review][:content], rating: params[:review][:rating], localOrNah: params[:review][:localOrNah])
+        render json: review
     end
 
-    private 
-
-    def review_params
-        params.permit(:name, :localOrNah, :station_id, :content, :rating)
-    end
+  
 
 end
