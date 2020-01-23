@@ -1,12 +1,12 @@
 class StationsController < ApplicationController
     def index
         stations = Station.all
-        json = Rails.cache.fetch("stations") do
-            stations.map do |station|
-                StationSerializer.new(station).to_hash
-            end 
-        end
-        render json: json
+        # json = Rails.cache.fetch("stations") do
+        #     stations.map do |station|
+        #         StationSerializer.new(station).to_hash
+        #     end 
+        # end
+        render json: stations
     end
 
     def show
